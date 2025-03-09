@@ -5,6 +5,7 @@
 auto main(int argc, char** argv) -> int {
   if (MPI_Init(&argc, &argv) != MPI_SUCCESS) {
     std::println(stderr, "MPI_Init failed: {}", std::strerror(errno));
+    return 1;
   }
 
   int rank;
