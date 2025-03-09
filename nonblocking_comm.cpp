@@ -50,7 +50,7 @@ auto main(int argc, char** argv) -> int {
     return 1;
   }
 
-  std::println("Rank {}: Send {:2}, Recv {:2}", rank, send, recv);
+  std::println("Rank {:2}: Send {:2}, Recv {:2}", rank, send, recv);
 
   MPI_Finalize();
 }

@@ -41,7 +41,7 @@ auto main(int argc, char** argv) -> int {
     }
   }
 
-  std::println("Rank {}: Send {:2}, Recv {:2}", rank, send, recv);
+  std::println("Rank {:2}: Send {:2}, Recv {:2}", rank, send, recv);
 
   if (rank + 1 < num_rank) {
     if (MPI_Send(&send, 1, MPI_INT, rank + 1, 0, MPI_COMM_WORLD) != MPI_SUCCESS) {
